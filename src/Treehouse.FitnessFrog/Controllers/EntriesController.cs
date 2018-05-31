@@ -59,6 +59,12 @@ namespace Treehouse.FitnessFrog.Controllers
             //ViewBag.Intensity = ModelState["Intensity"].Value.AttemptedValue;
             //ViewBag.Exclude = ModelState["Exclude"].Value.AttemptedValue;
             //ViewBag.Notes = ModelState["Notes"].Value.AttemptedValue;
+            if (ModelState.IsValid)
+            {
+                _entriesRepository.AddEntry(entry);
+
+                //TODO: Display the Entries list page
+            }
 
             return View(entry);
         }

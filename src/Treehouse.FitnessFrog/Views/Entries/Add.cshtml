@@ -16,7 +16,7 @@
             <div class="form-group">
                 <!--Using the Entry to grab the things we need-->
                 @Html.LabelFor(m => m.Date, new {  @class = "control-label" })
-                @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.Date, "{0:d}" ,new { @class = "form-control" })
             </div>
 
             <div class="form-group">
